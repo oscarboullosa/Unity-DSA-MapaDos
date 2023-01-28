@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game1/WinSceneJuego1.unity
     guid: db91ee8f793a9844e98e0aea5a0ce41b
+  - enabled: 1
+    path: Assets/Scenes/Puzle_de_Paneles/ScenePuzle.unity
+    guid: 342d2a41a7fc7984d8760967b5d4d419
+  - enabled: 1
+    path: Assets/Scenes/Game2Win.unity
+    guid: d41b68fc9104381499c74311eb85190e
+  - enabled: 1
+    path: Assets/Scenes/Game2Lose.unity
+    guid: 9a01e701539ec2b4aa719253fed2712e
   m_configObjects: {}

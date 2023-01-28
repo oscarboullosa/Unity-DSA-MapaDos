@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerRedGame1Win : MonoBehaviour
+public class PlayerRedGame2Win : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rb;
 
     private Animator animator;
-    public GameObject nivelJuego1;
+    public GameObject nivelJuego2;
     private bool colision;
 
     public GameObject lineaBlanca;
@@ -18,7 +18,7 @@ public class PlayerRedGame1Win : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        Vector3 position1 = nivelJuego1.transform.position;
+        Vector3 position1 = nivelJuego2.transform.position;
         float x1 = position1.x;
         float y1 = position1.y;
         float positionY1 = y1 + 0.8f;
@@ -41,12 +41,12 @@ public class PlayerRedGame1Win : MonoBehaviour
     }
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Juego2"))
+        if (collision.gameObject.CompareTag("Juego3"))
         {
             colision = true;
             animator.SetTrigger("PlayerRedJump");
             yield return new WaitForSeconds(1);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("ScenePuzle");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Scene3");
             while (!asyncLoad.isDone)
             {
                 yield return null;
