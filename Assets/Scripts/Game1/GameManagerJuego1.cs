@@ -1,22 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManagerJuego1 : MonoBehaviour
 {
     [SerializeField] private List<Yoshi> yoshis;
     [Header("UI objects")]
-    [SerializeField] private GameObject startButton;
+    
     [SerializeField] private GameObject GameUI;
     [SerializeField] private GameObject OOT;
     [SerializeField] private GameObject DKH;
     [SerializeField] private GameObject WinText;
     [SerializeField] private TMPro.TextMeshProUGUI TimeText;
     [SerializeField] private TMPro.TextMeshProUGUI ScoreText;
-    
-    public static GameManager instance;
+    [SerializeField] private GameObject startButton;
 
-    private float startingTime = 120f;
+    public static GameManagerJuego1 instance;
+
+    private float startingTime = 150f;
 
     private float timeRemaining;
     private HashSet<Yoshi> currentYoshis = new HashSet<Yoshi>();
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            
         }
         else
         {
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         startButton.SetActive(false);
+        
         OOT.SetActive(false);
         DKH.SetActive(false);
         GameUI.SetActive(true);
@@ -54,20 +58,21 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(int type)
     {
-        if (type == 0)
+        /*if (type == 0)
         {
             OOT.SetActive(true);
         }
         else
         {
             DKH.SetActive(true);
-        }
+        }*/
         foreach(Yoshi yoshi in yoshis)
         {
             yoshi.StopGame();
         }
-        playing = false;
-        startButton.SetActive(true);
+        //playing = false;
+        //startButton.SetActive(true);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameOverSceneJuego1");
     }
     void Update()
     {
@@ -97,14 +102,15 @@ public class GameManager : MonoBehaviour
     }
     public void Win()
     {
-        WinText.SetActive(true);
-        Time.timeScale = 0f;
-        StopAllCoroutines();
-        playing = false;
+        //WinText.SetActive(true);
+        //Time.timeScale = 0f;
+        //StopAllCoroutines();
+        //playing = false;
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("WinSceneJuego1");
     }
     public void AddScore(int yoshiIndex,int points)
     {
-        if (score == 99){
+        if (score >= 99){
             Win();
         }
         score += points;

@@ -11,7 +11,7 @@ public class Yoshi : MonoBehaviour
     [SerializeField] private Sprite Smoke;
 
     [Header("GameManager")]
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameManagerJuego1 gameManager;
 
     // The offset of the sprite to hide it.
     private Vector2 startPosition = new Vector2(1000f, 1000f);
@@ -131,7 +131,7 @@ public class Yoshi : MonoBehaviour
         if (hittable)
         {
             hittable = false;
-            GameManager.instance.Missed(yoshiIndex, yoshiType != YoshiType.heel);
+            GameManagerJuego1.instance.Missed(yoshiIndex, yoshiType != YoshiType.heel);
         }
     }
     public void Hide()
@@ -158,7 +158,7 @@ public class Yoshi : MonoBehaviour
             {
                 case YoshiType.Standard:
                     spriteRenderer.sprite = Smoke;
-                    GameManager.instance.AddScore(yoshiIndex,1);
+                    GameManagerJuego1.instance.AddScore(yoshiIndex,1);
                     StopAllCoroutines();
                     StartCoroutine(QuickHide());
                     hittable = false;
@@ -172,7 +172,7 @@ public class Yoshi : MonoBehaviour
                     else
                     {
                         spriteRenderer.sprite = Smoke;
-                        GameManager.instance.AddScore(yoshiIndex,5);
+                        GameManagerJuego1.instance.AddScore(yoshiIndex,5);
                         StopAllCoroutines();
                         StartCoroutine(QuickHide());
                         hittable = false;
@@ -180,7 +180,7 @@ public class Yoshi : MonoBehaviour
                     break;
                 case YoshiType.heel:
                     spriteRenderer.sprite = Smoke;
-                    GameManager.instance.GameOver(1);
+                    GameManagerJuego1.instance.GameOver(1);
                     break;
                 default:
                     break;

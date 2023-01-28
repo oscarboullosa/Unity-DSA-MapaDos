@@ -7,6 +7,7 @@ TagManager:
   - Linea
   - Juego1
   - Yoshi0
+  - Juego2
   layers:
   - Default
   - TransparentFX
