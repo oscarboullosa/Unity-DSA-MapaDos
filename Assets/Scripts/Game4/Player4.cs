@@ -145,7 +145,7 @@ public class Player4 : MonoBehaviour
 
             punt.text = "Puntuación: " + collisionCount;
 
-            if (collisionCount >= 1)
+            if (collisionCount >= 40)
             {
                 yield return new WaitForSeconds(0.9f);
                 AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("WinSceneJuego4");
