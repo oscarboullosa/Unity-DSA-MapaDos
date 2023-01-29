@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Game1/WinSceneJuego1.unity
     guid: db91ee8f793a9844e98e0aea5a0ce41b
   - enabled: 1
-    path: Assets/Scenes/Puzle_de_Paneles/ScenePuzle.unity
+    path: Assets/Scenes/Game2/ScenePuzle.unity
     guid: 342d2a41a7fc7984d8760967b5d4d419
   - enabled: 1
     path: Assets/Scenes/Game2Win.unity
@@ -39,16 +39,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Game2Lose.unity
     guid: 9a01e701539ec2b4aa719253fed2712e
   - enabled: 1
-    path: Assets/Scenes/TestLuigi (Game3)/FirstSceneTestLuigi.unity
+    path: Assets/Scenes/Game3/FirstSceneTestLuigi.unity
     guid: da659542ce699b841a884f0790658cac
   - enabled: 1
-    path: Assets/Scenes/TestLuigi (Game3)/GameOverTestLuigi.unity
+    path: Assets/Scenes/Game3/GameOverTestLuigi.unity
     guid: 4754da52c84f673458cbe77ae6c43bfa
   - enabled: 1
-    path: Assets/Scenes/TestLuigi (Game3)/PrincipalTestLuigi.unity
+    path: Assets/Scenes/Game3/PrincipalTestLuigi.unity
     guid: 663664b5d27437140b637960e6abe0ff
   - enabled: 1
-    path: Assets/Scenes/TestLuigi (Game3)/SuccesTestLuigi.unity
+    path: Assets/Scenes/Game3/SuccesTestLuigi.unity
     guid: c76595d6d0b7d114ba85f3dcf3d32f95
   - enabled: 1
     path: Assets/Scenes/Game3Win.unity
@@ -56,4 +56,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game3Lose.unity
     guid: cd9f3def0d25a89468f82fca144b6fdf
+  - enabled: 1
+    path: Assets/Scenes/Game4Lose.unity
+    guid: 114ed2aa7e17d2849b3219e54034474f
+  - enabled: 1
+    path: Assets/Scenes/Game4/FirstScene4.unity
+    guid: e76958d1ecafd31449cb72fa2bc83804
+  - enabled: 1
+    path: Assets/Scenes/Game2/FirstSceneJuego2.unity
+    guid: b5b8c487b059d7542b8fbbdb3ccf9bb2
+  - enabled: 1
+    path: Assets/Scenes/Game4/Principalscene4.unity
+    guid: 785272de991099f48ab7262d9468bef9
+  - enabled: 1
+    path: Assets/Scenes/Game2/GameOverSceneJuego2.unity
+    guid: 69f09f5a20dc88c45ae5adabcefb7542
+  - enabled: 1
+    path: Assets/Scenes/Game2/WinSceneJuego2.unity
+    guid: e92d7a544838c7b41882cb5d1eebd45a
   m_configObjects: {}
