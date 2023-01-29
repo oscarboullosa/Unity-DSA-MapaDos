@@ -216,9 +216,9 @@ public class GameManager_Puzle : MonoBehaviour
         }**/
         else
         {
-            end = true;
-            levelText.text = "You have finished the game";
-            Invoke("HideBoard", 1);
+            //end = true;
+            //levelText.text = "You have finished the game";
+            //Invoke("HideBoard", 1);
             StartCoroutine(GameWon());
         }
         if (!end)

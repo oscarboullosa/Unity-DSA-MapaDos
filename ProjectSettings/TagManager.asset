@@ -11,6 +11,7 @@ TagManager:
   - Juego3
   - Fantasma
   - Juego4
+  - Juego5
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - BlockingLayer
   - 
   - 
   - 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player4 : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class Player4 : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public Text punt;
+    //public Text punt;
+    [SerializeField] private TMP_Text punt;
 
     private Vector2 touchOrigin = -Vector2.one;    //Used to store location of screen touch origin for mobile controls.
 
@@ -31,7 +33,7 @@ public class Player4 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        punt = GameObject.Find("Canvas/Text").GetComponent<Text>();
+        punt = GameObject.Find("Canvas/Text").GetComponent<TMP_Text>();
 
         Camera camera = Camera.main;
         float cameraHalfWidth = camera.orthographicSize * camera.aspect;
@@ -117,14 +119,18 @@ public class Player4 : MonoBehaviour
 #endif
 
 
-        if (horizontalMovement != 0 || verticalMovement != 0)
+        if (horizontalMovement != 0)
         {
             /*Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
 
             transform.position = new Vector3(Mathf.Clamp(transform.position.x + movement.x * speed * Time.deltaTime * 10, minX, maxX),
                                        Mathf.Clamp(transform.position.y + movement.y * speed * Time.deltaTime * 10, minY, maxY),
                                        transform.position.z);*/
-            animator.SetTrigger("PlayerRedRun");
+            animator.SetTrigger("PlayerRun");
+        }
+        else if(verticalMovement != 0)
+        {
+            animator.SetTrigger("PlayerJump");
         }
     }
 
@@ -139,10 +145,10 @@ public class Player4 : MonoBehaviour
 
             punt.text = "Puntuación: " + collisionCount;
 
-            if (collisionCount >= 10)
+            if (collisionCount >= 1)
             {
                 yield return new WaitForSeconds(0.9f);
-                AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("WinScene");
+                AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("WinSceneJuego4");
                 while (!asyncLoad.isDone)
                 {
                     yield return null;
