@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 750701580}
   - component: {fileID: 750701579}
   - component: {fileID: 750701578}
+  - component: {fileID: 750701581}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -491,6 +492,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750701581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750701577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94fa9ce3bbe0c3488a6931c0db993db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 3042683394110361132, guid: 31e3d031c805b3f49a5b4f702e28a898, type: 3}
 --- !u!1 &1002729300
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +894,7 @@ RectTransform:
   m_Children:
   - {fileID: 1267721093}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -901,7 +915,7 @@ GameObject:
   - component: {fileID: 1267721095}
   - component: {fileID: 1267721094}
   m_Layer: 5
-  m_Name: Jugar
+  m_Name: Reintentar3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -941,7 +955,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reintentar: {fileID: 1267721095}
-  player: {fileID: 1852657064}
 --- !u!114 &1267721095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,7 +1103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1403264518 stripped
 Transform:
@@ -1331,20 +1344,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce73936f42d6c7489a93256b973846d, type: 3}
---- !u!1 &1749027227 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1596175509361016035, guid: 4ce73936f42d6c7489a93256b973846d, type: 3}
-  m_PrefabInstance: {fileID: 1749027226}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1749027231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8206846011978666813, guid: 4ce73936f42d6c7489a93256b973846d, type: 3}
   m_PrefabInstance: {fileID: 1749027226}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1852657064 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8746145236760948398, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-  m_PrefabInstance: {fileID: 3047734088962146253}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2009502723
 GameObject:
@@ -1563,78 +1566,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3047734088962146253
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.9707909
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8463493
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1368687181697856010, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047734089414748603, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: nivelJuego3
-      value: 
-      objectReference: {fileID: 1749027227}
-    - target: {fileID: 8746145236760948398, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}
-      propertyPath: m_Name
-      value: PlayerRedGame3Lose
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1126616df38135e4dbfa6e0461a39dff, type: 3}

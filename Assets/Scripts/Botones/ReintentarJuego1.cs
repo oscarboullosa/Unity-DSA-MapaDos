@@ -8,8 +8,8 @@ using TMPro;
 public class ReintentarJuego1 : MonoBehaviour
 {
     public Button reintentar;
-    public GameObject player;
-    private Animator animator;
+    //public GameObject player;
+    //private Animator animator;
     private TextMeshProUGUI textReintentar;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class ReintentarJuego1 : MonoBehaviour
     {
         textReintentar = reintentar.GetComponentInChildren<TextMeshProUGUI>();
         textReintentar.text = "REINTENTAR";
-        animator = player.GetComponent<Animator>();
+        //animator = player.GetComponent<Animator>();
         reintentar.onClick.AddListener(TaskOnClick);
 
 
@@ -25,7 +25,7 @@ public class ReintentarJuego1 : MonoBehaviour
 
     void TaskOnClick()
     {
-        animator.SetTrigger("PlayerRedJump");
+        //animator.SetTrigger("PlayerRedJump");
         StartCoroutine(LoadScene());
     }
 
