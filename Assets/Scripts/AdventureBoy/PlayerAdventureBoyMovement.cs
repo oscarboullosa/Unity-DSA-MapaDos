@@ -94,7 +94,7 @@ public class PlayerAdventureBoyMovement : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Game2Win")
         {
-            if (collision.gameObject.CompareTag("Juego21") || collision.gameObject.CompareTag("Juego3") || collision.gameObject.CompareTag("Juego4") || collision.gameObject.CompareTag("Juego5"))
+            if (collision.gameObject.CompareTag("Juego2") || collision.gameObject.CompareTag("Juego3") || collision.gameObject.CompareTag("Juego4") || collision.gameObject.CompareTag("Juego5"))
             {
                 colision = true;
             }
