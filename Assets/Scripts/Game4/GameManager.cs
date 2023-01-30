@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     bool Knight = false;
 
     public GameObject playerZombie;
-    bool Zombie = true;
+    bool Zombie = false;
     private string character;
 
     public void receivedCharacter(string character)

@@ -71,7 +71,7 @@ public class GameManager1 : MonoBehaviour
     bool Knight = false;
 
     public GameObject playerZombie;
-    bool Zombie = true;
+    bool Zombie = false;
 
     private Vector3 playerPosition;
 
