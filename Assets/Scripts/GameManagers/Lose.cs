@@ -45,7 +45,7 @@ public class Lose : MonoBehaviour
     bool CuteGirl = false;
 
     public GameObject playerDino;
-    bool Dino = true;
+    bool Dino = false;
 
     public GameObject playerDog;
     bool Dog = false;
@@ -72,7 +72,7 @@ public class Lose : MonoBehaviour
     bool Knight = false;
 
     public GameObject playerZombie;
-    bool Zombie = false;
+    bool Zombie = true;
 
     private Vector3 playerPosition;
 

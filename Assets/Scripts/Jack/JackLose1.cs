@@ -49,7 +49,7 @@ public class JackLose1 : MonoBehaviour
     {
         if (playRedJump)
         {
-            animator.SetTrigger("PlayerRedJump");
+            animator.SetTrigger("JackJump");
             playRedJump = false;
         }
     }

@@ -50,7 +50,7 @@ public class KnightLose1 : MonoBehaviour
     {
         if (playRedJump)
         {
-            animator.SetTrigger("TheKnightJump");
+            animator.SetTrigger("KnightJump");
             playRedJump = false;
         }
     }

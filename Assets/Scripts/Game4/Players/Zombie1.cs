@@ -130,7 +130,7 @@ public class Zombie1 : MonoBehaviour
         }
         else if (verticalMovement != 0)
         {
-            animator.SetTrigger("ZombieJump");
+            animator.SetTrigger("ZombieAttack");
         }
     }
 
